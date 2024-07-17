@@ -119,9 +119,6 @@ export default function Hero() {
               alt="potrait 1"
               src={portrait_1}
             />
-            <div className="bg-blue-500">
-              <p>blabla</p>
-            </div>
           </Grid>
         </Grid>
 
