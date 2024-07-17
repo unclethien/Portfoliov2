@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { PaletteMode } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -64,6 +66,10 @@ export default function Home() {
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
+  const toggleCustomTheme = () => {
+    setShowCustomTheme((prev) => !prev);
   };
 
   return (
