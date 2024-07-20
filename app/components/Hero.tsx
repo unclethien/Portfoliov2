@@ -50,7 +50,7 @@ export default function Hero() {
                   fontSize: "clamp(3.5rem, 10vw, 4rem)",
                 }}
               >
-                I&apos;m &nbsp;
+                I&apos;m&nbsp;
                 <Typography
                   component="span"
                   variant="h1"
@@ -68,6 +68,7 @@ export default function Hero() {
               <Typography
                 textAlign="center"
                 color="text.secondary"
+                variant="h6"
                 sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
               >
                 Software Engineer based in Dallas, TX.

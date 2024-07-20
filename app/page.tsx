@@ -14,6 +14,7 @@ import getLPTheme from "@/app/components/getLPTheme";
 import ToggleColorMode from "@/app/components/ToggleColorMode";
 import Hero from "@/app/components/Hero";
 import Image from "next/image";
+import Footer from "./components/Footer";
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
@@ -78,6 +79,7 @@ export default function Home() {
         <CssBaseline />
         <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
         <Hero />
+        <Footer />
       </ThemeProvider>
     </>
   );
