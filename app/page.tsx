@@ -9,12 +9,12 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
-import AppAppBar from "@/app/components/AppAppBar";
-import getLPTheme from "@/app/components/getLPTheme";
-import ToggleColorMode from "@/app/components/ToggleColorMode";
-import Hero from "@/app/components/Hero";
+import AppAppBar from "@/components/AppAppBar";
+import getLPTheme from "@/components/getLPTheme";
+import ToggleColorMode from "@/components/ToggleColorMode";
+import Hero from "@/components/Hero";
 import Image from "next/image";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;

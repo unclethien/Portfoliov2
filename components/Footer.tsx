@@ -12,7 +12,7 @@ import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import Image from "next/image";
-import logo from "../../public/Logo.svg";
+import logo from "../public/Logo.svg";
 
 const logoStyle = {
   width: "90px",

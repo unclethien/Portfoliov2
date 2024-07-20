@@ -12,7 +12,7 @@ import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "./ToggleColorMode";
 import Image from "next/image";
-import logo from "../../public/Logo.svg";
+import logo from "../public/Logo.svg";
 import { useRouter } from "next/navigation";
 
 const logoStyle = {
@@ -96,7 +96,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 alt="Profile Logo"
                 src={logo}
                 style={logoStyle}
-                onClick={() => router.push("/page")}
+                // onClick={() => router.push("/app")}
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem

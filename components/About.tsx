@@ -8,7 +8,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
-import portrait_1 from "../../public/potrait 1.jpeg";
+import portrait_1 from "../public/potrait 1.jpeg";
 import IconButton from "@mui/material/IconButton";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -48,6 +48,19 @@ export default function Hero() {
             alignItems: "center",
           }}
         >
+          <Grid item xs={8} md={4}>
+            <Image
+              style={{
+                width: "90%",
+                height: "auto",
+                borderRadius: "10px",
+                padding: "10px",
+              }}
+              sizes="100wv"
+              alt="potrait 1"
+              src={portrait_1}
+            />
+          </Grid>
           <Grid item xs={8}>
             <Stack
               spacing={2}
@@ -125,43 +138,7 @@ export default function Hero() {
               </Stack>
             </Stack>
           </Grid>
-          <Grid item xs={8} md={4}>
-            <Image
-              style={{
-                width: "90%",
-                height: "auto",
-                borderRadius: "10px",
-                padding: "10px",
-              }}
-              sizes="100wv"
-              alt="potrait 1"
-              src={portrait_1}
-            />
-          </Grid>
         </Grid>
-
-        <Box
-          id="image"
-          sx={(theme) => ({
-            mt: { xs: 8, sm: 10 },
-            alignSelf: "center",
-            height: 700,
-            width: { xs: "100%", sm: "90%", md: "80%" }, // Adjust width for different screen sizes
-            backgroundSize: "cover",
-            borderRadius: "10px",
-            outline: "1px solid",
-            outlineColor:
-              theme.palette.mode === "light"
-                ? alpha("#BFCCD9", 0.5)
-                : alpha("#9CCCFC", 0.1),
-            boxShadow:
-              theme.palette.mode === "light"
-                ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
-                : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
-          })}
-        >
-          <ResponsiveGrid />
-        </Box>
       </Container>
     </Box>
   );
