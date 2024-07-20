@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "./ToggleColorMode";
 import Image from "next/image";
 import logo from "../../public/Logo.svg";
+import { useRouter } from "next/navigation";
 
 const logoStyle = {
   width: "60px",
@@ -28,6 +29,7 @@ interface AppAppBarProps {
 
 function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
   const [open, setOpen] = React.useState(false);
+  const router = useRouter();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -90,10 +92,15 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 px: 0,
               }}
             >
-              <Image alt="Profile Logo" src={logo} style={logoStyle} />
+              <Image
+                alt="Profile Logo"
+                src={logo}
+                style={logoStyle}
+                onClick={() => router.push("/page")}
+              />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem
-                  onClick={() => scrollToSection("features")}
+                  onClick={() => router.push("/About")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
