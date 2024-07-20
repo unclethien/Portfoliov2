@@ -9,6 +9,10 @@ import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import portrait_1 from "../../public/potrait 1.jpeg";
+import IconButton from "@mui/material/IconButton";
+import GithubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailIcon from "@mui/icons-material/Mail";
 
 export default function Hero() {
   return (
@@ -33,7 +37,16 @@ export default function Hero() {
           pb: { xs: 8, sm: 12 },
         }}
       >
-        <Grid container spacing={0}>
+        <Grid
+          container
+          spacing={0}
+          sx={{
+            display: "flex",
+            flexDirection: { sm: "column", md: "row" },
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Grid item xs={8}>
             <Stack
               spacing={2}
@@ -44,7 +57,7 @@ export default function Hero() {
                 variant="h1"
                 sx={{
                   display: "flex",
-                  flexDirection: { xs: "column", md: "row" },
+                  flexDirection: { xs: "column", sm: "column", md: "row" },
                   alignSelf: "center",
                   textAlign: "center",
                   fontSize: "clamp(3.5rem, 10vw, 4rem)",
@@ -68,53 +81,56 @@ export default function Hero() {
               <Typography
                 textAlign="center"
                 color="text.secondary"
-                variant="h6"
+                variant="subtitle2"
                 sx={{ alignSelf: "center", width: { sm: "100%", md: "80%" } }}
               >
-                Software Engineer based in Dallas, TX.
+                I am a software engineer with a passion for food, a keen
+                interest in 3D printing and custom keyboards, a love for
+                technology, and a fondness for cats.
               </Typography>
               <Stack
-                direction={{ xs: "column", sm: "row" }}
-                alignSelf="center"
-                spacing={1}
+                direction="row"
+                justifyContent="center"
+                spacing={2}
                 useFlexGap
-                sx={{ pt: 2, width: { xs: "100%", sm: "auto" } }}
+                sx={{
+                  color: "text.secondary",
+                }}
               >
-                <TextField
-                  id="outlined-basic"
-                  hiddenLabel
-                  size="small"
-                  variant="outlined"
-                  aria-label="Enter your email address"
-                  placeholder="Your email address"
-                  inputProps={{
-                    autoComplete: "off",
-                    "aria-label": "Enter your email address",
-                  }}
-                />
-                <Button variant="contained" color="primary">
-                  Start now
-                </Button>
+                <IconButton
+                  color="inherit"
+                  href="https://github.com/unclethien"
+                  aria-label="GitHub"
+                  sx={{ alignSelf: "center" }}
+                >
+                  <GithubIcon />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                  href="https://www.linkedin.com/in/utdthiennguyen/"
+                  aria-label="LinkedIn"
+                  sx={{ alignSelf: "center" }}
+                >
+                  <LinkedInIcon />
+                </IconButton>
+                <IconButton
+                  color="inherit"
+                  href="mailto:dxn210021@utdallas.edu"
+                  aria-label="X"
+                  sx={{ alignSelf: "center" }}
+                >
+                  <MailIcon />
+                </IconButton>
               </Stack>
-              <Typography
-                variant="caption"
-                textAlign="center"
-                sx={{ opacity: 0.8 }}
-              >
-                By clicking &quot;Start now&quot; you agree to our&nbsp;
-                <Link href="#" color="primary">
-                  Terms & Conditions
-                </Link>
-                .
-              </Typography>
             </Stack>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={8} md={4}>
             <Image
               style={{
                 width: "90%",
                 height: "auto",
                 borderRadius: "10px",
+                padding: "10px",
               }}
               sizes="100wv"
               alt="potrait 1"
@@ -123,30 +139,30 @@ export default function Hero() {
           </Grid>
         </Grid>
 
-        {/* <Box
+        <Box
           id="image"
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
-            alignSelf: 'center',
+            alignSelf: "center",
             height: { xs: 200, sm: 700 },
-            width: '100%',
+            width: "100%",
             backgroundImage:
-              theme.palette.mode === 'light'
+              theme.palette.mode === "light"
                 ? 'url("/static/images/templates/templates-images/hero-light.png")'
                 : 'url("/static/images/templates/templates-images/hero-dark.png")',
-            backgroundSize: 'cover',
-            borderRadius: '10px',
-            outline: '1px solid',
+            backgroundSize: "cover",
+            borderRadius: "10px",
+            outline: "1px solid",
             outlineColor:
-              theme.palette.mode === 'light'
-                ? alpha('#BFCCD9', 0.5)
-                : alpha('#9CCCFC', 0.1),
+              theme.palette.mode === "light"
+                ? alpha("#BFCCD9", 0.5)
+                : alpha("#9CCCFC", 0.1),
             boxShadow:
-              theme.palette.mode === 'light'
-                ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
-                : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
+              theme.palette.mode === "light"
+                ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
+                : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
           })}
-        /> */}
+        />
       </Container>
     </Box>
   );

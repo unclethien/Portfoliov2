@@ -28,9 +28,10 @@ export default function Footer() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: { xs: 4, sm: 8 },
+        gap: { xs: 3, sm: 6 },
         py: { xs: 8, sm: 10 },
-        textAlign: { sm: "center", md: "left" },
+        textAlign: "center",
+        justifyContent: "center ",
       }}
     >
       <Box
@@ -41,7 +42,13 @@ export default function Footer() {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
+        <Box
+          sx={{
+            width: { xs: "100%", sm: "60%" },
+            display: "flex",
+            justifyContent: { xs: "center", sm: "left" },
+          }}
+        >
           <Box>
             <Image alt="Profile Logo" src={logo} style={logoStyle} />
           </Box>
@@ -52,7 +59,8 @@ export default function Footer() {
             justifyContent: "space-between",
             width: "100%",
             borderColor: "divider",
-            pr: { xs: 0, sm: 4 },
+            py: { xs: 4, sm: 0 },
+            flexDirection: { xs: "column", sm: "row" },
           }}
         >
           <Link color="text.secondary" href="#">
