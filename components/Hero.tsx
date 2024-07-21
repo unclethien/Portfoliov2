@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
-import ResponsiveGrid from "./ResponsiveGrid";
+import BoundedLayout from "./ResponsiveGrid";
 
 export default function Hero() {
   return (
@@ -89,6 +89,19 @@ export default function Hero() {
                 interest in 3D printing and custom keyboards, a love for
                 technology, and a fondness for cats.
               </Typography>
+              <Box display={"flex"} justifyContent="center">
+                <Button
+                  color="primary"
+                  variant="contained"
+                  size="medium"
+                  component="a"
+                  href="#"
+                  target="_blank"
+                >
+                  Get my CV
+                </Button>
+              </Box>
+
               <Stack
                 direction="row"
                 justifyContent="center"
@@ -141,11 +154,10 @@ export default function Hero() {
         </Grid>
 
         <Box
-          id="image"
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: "center",
-            height: 700,
+            height: { xs: 200, sm: 700 },
             width: { xs: "100%", sm: "90%", md: "80%" }, // Adjust width for different screen sizes
             backgroundSize: "cover",
             borderRadius: "10px",
@@ -160,7 +172,7 @@ export default function Hero() {
                 : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
           })}
         >
-          <ResponsiveGrid />
+          <BoundedLayout />
         </Box>
       </Container>
     </Box>

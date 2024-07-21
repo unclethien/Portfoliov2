@@ -96,7 +96,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 alt="Profile Logo"
                 src={logo}
                 style={logoStyle}
-                // onClick={() => router.push("/app")}
+                onClick={() => router.push("/")}
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem
@@ -162,7 +162,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
+                href="#"
                 target="_blank"
               >
                 Get my CV
