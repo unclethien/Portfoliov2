@@ -13,7 +13,7 @@ import AppAppBar from "@/components/AppAppBar";
 import getLPTheme from "@/components/getLPTheme";
 import ToggleColorMode from "@/components/ToggleColorMode";
 import Footer from "../../components/Footer";
-import About from "../../components/About";
+import About from "../../components/About/About";
 
 interface ToggleCustomThemeProps {
   showCustomTheme: Boolean;
