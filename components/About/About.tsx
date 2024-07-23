@@ -82,7 +82,8 @@ export default function Hero() {
               sx={{ width: { sm: "90%", md: "100%" } }}
             >
               <Typography
-                variant="subtitle1"
+                variant="subtitle2"
+                fontStyle={"italic"}
                 sx={{
                   display: "flex",
                   flexDirection: { xs: "column", sm: "column", md: "row" },
@@ -97,7 +98,8 @@ export default function Hero() {
               </Typography>
               <Typography
                 component="span"
-                variant="subtitle1"
+                variant="subtitle2"
+                fontStyle={"italic"}
                 sx={{
                   // fontSize: "clamp(3rem, 10vw, 4rem)",
                   color: (theme) =>

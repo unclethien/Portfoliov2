@@ -2,4 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.scroller{
+    -webkit-mask: liner-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: liner-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
 
+.scroll_inner{
+    flex-wrap:nowrap;
+    width: max-content;
+
+}

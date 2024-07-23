@@ -14,8 +14,63 @@ import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import BoundedLayout from "./ResponsiveGrid";
+import Card from "./Card";
+import useMeasure from "react-use-measure";
+import { omit, set } from "lodash";
+import { animate, motion, useMotionValue } from "framer-motion";
 
 export default function Hero() {
+  const images = [
+    "/images/Image 1.jpeg",
+    "/images/Image 2.jpg",
+    "/images/Image 3.jpeg",
+    "/images/Image 4.jpg",
+    "/images/Image 5.jpeg",
+    "/images/Image 6.jpeg",
+    "/images/Image 7.jpeg",
+    "/images/Image 8.jpeg",
+    "/images/Image 9.jpeg",
+    "/images/Image 10.jpeg",
+  ];
+
+  const FAST_DURATION = 45;
+  const SLOW_DURATION = 0;
+
+  const [duration, setDuration] = React.useState(FAST_DURATION);
+
+  let [ref, { width }] = useMeasure();
+
+  const xTranslation = useMotionValue(0);
+
+  const [mustFinish, setMustFinish] = React.useState(false);
+  const [rerender, setRerender] = React.useState(false);
+
+  React.useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 - 8;
+
+    if (mustFinish) {
+      controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
+        ease: "linear",
+        duration: duration * (1 - xTranslation.get() / finalPosition),
+        onComplete: () => {
+          setRerender(!rerender);
+          setMustFinish(false);
+        },
+      });
+    } else {
+      controls = animate(xTranslation, [0, finalPosition], {
+        ease: "linear",
+        duration: duration,
+        repeat: Infinity,
+        repeatType: "loop",
+        repeatDelay: 0,
+      });
+    }
+
+    return controls.stop;
+  }, [xTranslation, width, duration, rerender]);
+
   return (
     <Box
       id="hero"
@@ -152,12 +207,31 @@ export default function Hero() {
             />
           </Grid>
         </Grid>
-
+        <Box className="my-32">
+          <motion.div
+            className="absolute left-0 flex gap-4"
+            ref={ref}
+            style={{ x: xTranslation }}
+            onHoverStart={() => {
+              setMustFinish(true);
+              setDuration(SLOW_DURATION);
+            }}
+            onHoverEnd={() => {
+              setMustFinish(true);
+              setDuration(FAST_DURATION);
+            }}
+          >
+            {[...images, ...images].map((item, index) => (
+              <Card image={item} key={index} />
+            ))}
+          </motion.div>
+        </Box>
         <Box
+          className="mt-44"
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: "center",
-            height: { xs: 200, sm: 700 },
+            height: { xs: 700, sm: 700 },
             width: { xs: "100%", sm: "90%", md: "80%" }, // Adjust width for different screen sizes
             backgroundSize: "cover",
             borderRadius: "10px",

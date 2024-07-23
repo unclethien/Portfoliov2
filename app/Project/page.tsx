@@ -12,7 +12,7 @@ import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import AppAppBar from "@/components/AppAppBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
-import About from "../../components/About/About";
+import LeftAlignedTimeline from "../../components/Project/TimeLine";
 
 export default function Home() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
@@ -33,7 +33,7 @@ export default function Home() {
       <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
         <CssBaseline />
         <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-        <About />
+        <LeftAlignedTimeline />
         <Footer />
       </ThemeProvider>
     </>

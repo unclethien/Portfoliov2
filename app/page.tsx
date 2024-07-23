@@ -16,6 +16,7 @@ import Hero from "@/components/Hero";
 import Image from "next/image";
 import Footer from "../components/Footer";
 
+
 export default function Home() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
@@ -25,18 +26,15 @@ export default function Home() {
   const toggleColorMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
-
-  const toggleCustomTheme = () => {
-    setShowCustomTheme((prev) => !prev);
-  };
-
   return (
     <>
       <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
         <CssBaseline />
         <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
         <Hero />
+        
         <Footer />
+        
       </ThemeProvider>
     </>
   );
