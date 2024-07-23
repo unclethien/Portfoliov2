@@ -34,7 +34,7 @@ export default function Hero() {
   ];
 
   const FAST_DURATION = 45;
-  const SLOW_DURATION = 0;
+  const SLOW_DURATION = 360;
 
   const [duration, setDuration] = React.useState(FAST_DURATION);
 
@@ -207,7 +207,7 @@ export default function Hero() {
             />
           </Grid>
         </Grid>
-        <Box className="my-32">
+        <Box className="mt-16 mb-40">
           <motion.div
             className="absolute left-0 flex gap-4"
             ref={ref}
