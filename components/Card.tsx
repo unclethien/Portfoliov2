@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ image }) => {
         {showOverlay && (
           <motion.div
             className="absolute inset-0 z-10 flex justify-center items-center"
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.3 }}
           >
             {/* <div className="absolute bg-black pointer-events-none opacity-50 h-full w-full" />
             <motion.h1
