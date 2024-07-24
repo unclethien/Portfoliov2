@@ -207,9 +207,9 @@ export default function Hero() {
             />
           </Grid>
         </Grid>
-        <Box className="mt-16 mb-40">
+        <Box className="py-16 w-screen overflow-hidden">
           <motion.div
-            className="absolute left-0 flex gap-4"
+            className="left-0 flex fex-row gap-4"
             ref={ref}
             style={{ x: xTranslation }}
             onHoverStart={() => {
@@ -227,7 +227,7 @@ export default function Hero() {
           </motion.div>
         </Box>
         <Box
-          className="mt-44"
+          // className="m"
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
             alignSelf: "center",
