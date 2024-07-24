@@ -33,7 +33,7 @@ export default function Hero() {
     "/images/Image 10.jpeg",
   ];
 
-  const FAST_DURATION = 45;
+  const FAST_DURATION = 15;
   const SLOW_DURATION = 3000;
 
   const [duration, setDuration] = React.useState(FAST_DURATION);
@@ -221,7 +221,7 @@ export default function Hero() {
               setDuration(FAST_DURATION);
             }}
           >
-            {[...images, ...images].map((item, index) => (
+            {[...images, ...images, ...images, ...images].map((item, index) => (
               <Card image={item} key={index} />
             ))}
           </motion.div>
