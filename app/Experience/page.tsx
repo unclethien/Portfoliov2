@@ -11,8 +11,8 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import AppAppBar from "@/components/AppAppBar";
 import getLPTheme from "@/components/getLPTheme";
-import Footer from "../../components/Footer";
-import LeftAlignedTimeline from "../../components/Project/LeftAlignedTimeline";
+import Footer from "@/components/Footer";
+import LeftAlignedTimeline from "@/components/Project/LeftAlignedTimeline";
 import Container from "@mui/material/Container";
 
 export default function Home() {
@@ -54,7 +54,6 @@ export default function Home() {
             }}
           >
             <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-            <LeftAlignedTimeline />
             <Footer />
           </Container>
         </Box>

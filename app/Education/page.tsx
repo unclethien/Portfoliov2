@@ -54,7 +54,7 @@ export default function Home() {
             }}
           >
             <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-            <LeftAlignedTimeline />
+
             <Footer />
           </Container>
         </Box>

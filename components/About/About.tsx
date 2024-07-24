@@ -39,6 +39,9 @@ export default function Hero() {
           pb: { xs: 8, sm: 12 },
         }}
       >
+        <Typography component="h2" variant="h4" color="text.primary">
+          About Me
+        </Typography>
         <Grid
           container
           spacing={0}

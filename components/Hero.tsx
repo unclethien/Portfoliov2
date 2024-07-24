@@ -34,7 +34,7 @@ export default function Hero() {
   ];
 
   const FAST_DURATION = 45;
-  const SLOW_DURATION = 360;
+  const SLOW_DURATION = 3000;
 
   const [duration, setDuration] = React.useState(FAST_DURATION);
 
@@ -69,7 +69,7 @@ export default function Hero() {
     }
 
     return controls.stop;
-  }, [xTranslation, width, duration, rerender]);
+  }, [xTranslation, width, duration, rerender, mustFinish]);
 
   return (
     <Box
