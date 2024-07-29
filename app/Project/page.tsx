@@ -12,8 +12,9 @@ import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import AppAppBar from "@/components/AppAppBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
-import LeftAlignedTimeline from "../../components/Project/LeftAlignedTimeline";
+import LeftAlignedTimeline from "../../components/Experience/LeftAlignedTimeline";
 import Container from "@mui/material/Container";
+import ProjectContainer from "../../components/Project/ProjectContainer";
 
 export default function Home() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
@@ -35,7 +36,6 @@ export default function Home() {
         <CssBaseline />
         <Box
           sx={(theme) => ({
-            width: "100%",
             backgroundImage:
               theme.palette.mode === "light"
                 ? "linear-gradient(180deg, #CEE5FD, #FFF)"
@@ -54,7 +54,7 @@ export default function Home() {
             }}
           >
             <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-            <LeftAlignedTimeline />
+            <ProjectContainer />
             <Footer />
           </Container>
         </Box>

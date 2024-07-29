@@ -12,7 +12,7 @@ import portrait_1 from "../public/potrait 1.jpeg";
 import IconButton from "@mui/material/IconButton";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import MailIcon from "@mui/icons-material/Mail";
+import EmailIcon from "@mui/icons-material/Mail";
 import BoundedLayout from "./ResponsiveGrid";
 import Card from "./Card";
 import useMeasure from "react-use-measure";
@@ -188,7 +188,7 @@ export default function Hero() {
                   aria-label="X"
                   sx={{ alignSelf: "center" }}
                 >
-                  <MailIcon />
+                  <EmailIcon />
                 </IconButton>
               </Stack>
             </Stack>

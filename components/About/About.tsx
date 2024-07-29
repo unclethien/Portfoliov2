@@ -17,7 +17,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import ResponsiveGrid from "../ResponsiveGrid";
 import { space } from "postcss/lib/list";
 
-export default function Hero() {
+export default function About() {
   return (
     <Box
       sx={(theme) => ({
