@@ -61,8 +61,8 @@ const ProjectCard = ({ project }: Props) => {
           <IconButton component="a" href={project.repo}>
             <GitHubIcon />
           </IconButton>
-          {project.external && (
-            <IconButton component="a" href={project.external}>
+          {(project as { external?: string }).external && (
+            <IconButton component="a" href={(project as { external?: string }).external}>
               <LinkIcon />
             </IconButton>
           )}

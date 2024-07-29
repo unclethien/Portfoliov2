@@ -1,14 +1,22 @@
 export const WEB_APPS = [
   {
-    title: "Mentor Labs",
-    tags: ["Typescript", "React", "Redux Toolkit", "Nodejs", "PostgreSQL"],
+    title: "Healthcare Correspondence LLM",
+    tags: [
+      "Python",
+      "Chroma DB",
+      "Llama 2",
+      "Flask API",
+      "JavaScript",
+      "Tesseract OCR",
+      "HTML & CSS",
+    ],
     description:
-      "Apply for mentorship to the top mentors recommended by our powerful algorithm based on your profile. Enjoy one-to-one live mentorship in our interactive video streaming labs for free.",
-    thumbnail: "/_static/projects/mentorlabs.png",
-    repo: "https://github.com/adarshaacharya/MentorLabs",
+      "Developed a proof-of-concept Healthcare Correspondence Chatbot utilizing OCR, Chroma database, LLama 2 LLM, and a user-friendly web interface to simplify document searches for healthcare professionals.",
+    thumbnail: "#",
+    repo: "#",
   },
   {
-    title: "CS Overflow",
+    title: "Brain Tumor Detection – Undergrad Research",
     repo: "https://github.com/adarshaacharya/CsOverflow",
     thumbnail: "/_static/projects/csoverflow.png",
     description:
