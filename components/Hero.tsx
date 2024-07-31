@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Mail";
-import BoundedLayout from "./ResponsiveGrid";
+import ResponsiveGrid from "./ResponsiveGrid";
 import Card from "./Card";
 import useMeasure from "react-use-measure";
 import { omit, set } from "lodash";
@@ -246,7 +246,7 @@ export default function Hero() {
                 : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
           })}
         >
-          <BoundedLayout />
+          <ResponsiveGrid />
         </Box>
       </Container>
     </Box>
