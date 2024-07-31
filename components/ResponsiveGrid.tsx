@@ -6,7 +6,7 @@ import "react-resizable/css/styles.css";
 import _ from "lodash";
 import { useTheme } from "@mui/system";
 import Typography from "@mui/material/Typography";
-import { alpha } from "@mui/material";
+import { alpha, Container } from "@mui/material";
 import imageLight from "../public/static/images/imageLight.jpg";
 
 const ReactGridLayout = WidthProvider(Responsive);
@@ -53,132 +53,158 @@ const ResponsiveGrid: React.FC = () => {
   };
 
   return (
-    <ReactGridLayout
-      className="layout"
-      breakpoints={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
-      cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
-      rowHeight={100}
-      layouts={{ lg: layout }}
-      isDraggable={true}
-      isResizable={true}
-      onLayoutChange={onLayoutChange}
+    <Container
+      className="h-fit"
+      sx={(theme) => ({
+        mt: { xs: 8, sm: 10 },
+        alignSelf: "center",
+        // height: { xs: 700, sm: 700 },
+        width: { xs: "100%", sm: "90%", md: "80%" }, // Adjust width for different screen sizes
+        backgroundSize: "cover",
+        borderRadius: "10px",
+        outline: "1px solid",
+        outlineColor:
+          theme.palette.mode === "light"
+            ? alpha("#BFCCD9", 0.5)
+            : alpha("#9CCCFC", 0.1),
+        boxShadow:
+          theme.palette.mode === "light"
+            ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
+            : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
+      })}
     >
-      <Box
-        key="a"
-        data-grid={layout.find((item) => item.i === "a")}
-        sx={(theme) => ({
-          border: "1px solid",
-          borderColor: "grey.300",
-          padding: 2,
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
-          background: (theme) => (theme.palette.mode === "light" ? "" : "none"),
-          backgroundColor: "primary.contrastText",
-          outlineColor:
-            theme.palette.mode === "light"
-              ? alpha("#BFCCD9", 0.5)
-              : alpha("#9CCCFC", 0.1),
-        })}
+      <ReactGridLayout
+        className="layout"
+        breakpoints={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
+        cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
+        rowHeight={100}
+        layouts={{ lg: layout }}
+        isDraggable={true}
+        isResizable={true}
+        onLayoutChange={onLayoutChange}
       >
-        <Typography variant="body1" color="text.secondary">
-          See what our customers love about our products. Discover how we excel
-          in efficiency, durability, and satisfaction. Join us for quality,
-          innovation, and reliable support.
-        </Typography>
-      </Box>
-      <Box
-        key="b"
-        data-grid={layout.find((item) => item.i === "b")}
-        sx={(theme) => ({
-          border: "1px solid",
-          borderColor: "grey.300",
-          padding: 2,
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
-          background: (theme) => (theme.palette.mode === "light" ? "" : "none"),
-          backgroundColor: "primary.contrastText",
-          outlineColor:
-            theme.palette.mode === "light"
-              ? alpha("#BFCCD9", 0.5)
-              : alpha("#9CCCFC", 0.1),
-          // boxShadow:
-          //   theme.palette.mode === "light"
-          //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
-          //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
-        })}
-      >
-        b
-      </Box>
-      <Box
-        key="c"
-        data-grid={layout.find((item) => item.i === "c")}
-        sx={(theme) => ({
-          border: "1px solid",
-          borderColor: "grey.300",
-          padding: 2,
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
-          background: (theme) => (theme.palette.mode === "light" ? "" : "none"),
-          backgroundColor: "primary.contrastText",
-          outlineColor:
-            theme.palette.mode === "light"
-              ? alpha("#BFCCD9", 0.5)
-              : alpha("#9CCCFC", 0.1),
-          // boxShadow:
-          //   theme.palette.mode === "light"
-          //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
-          //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
-        })}
-      >
-        c
-      </Box>
-      <Box
-        key="d"
-        data-grid={layout.find((item) => item.i === "d")}
-        sx={(theme) => ({
-          border: "1px solid",
-          borderColor: "grey.300",
-          padding: 2,
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
-          background: (theme) => (theme.palette.mode === "light" ? "" : "none"),
-          backgroundColor: "primary.contrastText",
-          outlineColor:
-            theme.palette.mode === "light"
-              ? alpha("#BFCCD9", 0.5)
-              : alpha("#9CCCFC", 0.1),
-          // boxShadow:
-          //   theme.palette.mode === "light"
-          //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
-          //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
-        })}
-      >
-        d
-      </Box>
-      <Box
-        key="e"
-        data-grid={layout.find((item) => item.i === "e")}
-        sx={(theme) => ({
-          border: "1px solid",
-          borderColor: "grey.300",
-          padding: 2,
-          width: { sm: "100%", md: "60%" },
-          textAlign: { sm: "left", md: "center" },
-          background: (theme) => (theme.palette.mode === "light" ? "" : "none"),
-          backgroundColor: "primary.contrastText",
-          outlineColor:
-            theme.palette.mode === "light"
-              ? alpha("#BFCCD9", 0.5)
-              : alpha("#9CCCFC", 0.1),
-          // boxShadow:
-          //   theme.palette.mode === "light"
-          //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
-          //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
-        })}
-      >
-        e
-      </Box>
-    </ReactGridLayout>
+        <Box
+          key="a"
+          data-grid={layout.find((item) => item.i === "a")}
+          sx={(theme) => ({
+            border: "1px solid",
+            borderColor: "grey.300",
+            padding: 2,
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" },
+            background: (theme) =>
+              theme.palette.mode === "light" ? "" : "none",
+            backgroundColor: "primary.contrastText",
+            outlineColor:
+              theme.palette.mode === "light"
+                ? alpha("#BFCCD9", 0.5)
+                : alpha("#9CCCFC", 0.1),
+          })}
+        >
+          <Typography variant="body1" color="text.secondary">
+            See what our customers love about our products. Discover how we
+            excel in efficiency, durability, and satisfaction. Join us for
+            quality, innovation, and reliable support.
+          </Typography>
+        </Box>
+        <Box
+          key="b"
+          data-grid={layout.find((item) => item.i === "b")}
+          sx={(theme) => ({
+            border: "1px solid",
+            borderColor: "grey.300",
+            padding: 2,
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" },
+            background: (theme) =>
+              theme.palette.mode === "light" ? "" : "none",
+            backgroundColor: "primary.contrastText",
+            outlineColor:
+              theme.palette.mode === "light"
+                ? alpha("#BFCCD9", 0.5)
+                : alpha("#9CCCFC", 0.1),
+            // boxShadow:
+            //   theme.palette.mode === "light"
+            //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
+            //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
+          })}
+        >
+          b
+        </Box>
+        <Box
+          key="c"
+          data-grid={layout.find((item) => item.i === "c")}
+          sx={(theme) => ({
+            border: "1px solid",
+            borderColor: "grey.300",
+            padding: 2,
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" },
+            background: (theme) =>
+              theme.palette.mode === "light" ? "" : "none",
+            backgroundColor: "primary.contrastText",
+            outlineColor:
+              theme.palette.mode === "light"
+                ? alpha("#BFCCD9", 0.5)
+                : alpha("#9CCCFC", 0.1),
+            // boxShadow:
+            //   theme.palette.mode === "light"
+            //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
+            //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
+          })}
+        >
+          c
+        </Box>
+        <Box
+          key="d"
+          data-grid={layout.find((item) => item.i === "d")}
+          sx={(theme) => ({
+            border: "1px solid",
+            borderColor: "grey.300",
+            padding: 2,
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" },
+            background: (theme) =>
+              theme.palette.mode === "light" ? "" : "none",
+            backgroundColor: "primary.contrastText",
+            outlineColor:
+              theme.palette.mode === "light"
+                ? alpha("#BFCCD9", 0.5)
+                : alpha("#9CCCFC", 0.1),
+            // boxShadow:
+            //   theme.palette.mode === "light"
+            //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
+            //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
+          })}
+        >
+          d
+        </Box>
+        <Box
+          key="e"
+          data-grid={layout.find((item) => item.i === "e")}
+          sx={(theme) => ({
+            border: "1px solid",
+            borderColor: "grey.300",
+            padding: 2,
+            width: { sm: "100%", md: "60%" },
+            textAlign: { sm: "left", md: "center" },
+            background: (theme) =>
+              theme.palette.mode === "light" ? "" : "none",
+            backgroundColor: "primary.contrastText",
+            outlineColor:
+              theme.palette.mode === "light"
+                ? alpha("#BFCCD9", 0.5)
+                : alpha("#9CCCFC", 0.1),
+            // boxShadow:
+            //   theme.palette.mode === "light"
+            //     ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
+            //     : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
+          })}
+        >
+          e
+        </Box>
+      </ReactGridLayout>
+    </Container>
   );
 };
 
