@@ -39,7 +39,7 @@ const ProjectCard = ({ project }: Props) => {
     >
       <Image
         src={project.thumbnail}
-        alt={`Logo of ${project.title}`}
+        alt={`${project.title}`}
         style={{ width: "100%", height: "auto", borderRadius: "4px 4px 0 0" }}
         width={0}
         height={0}
@@ -62,7 +62,10 @@ const ProjectCard = ({ project }: Props) => {
             <GitHubIcon />
           </IconButton>
           {(project as { external?: string }).external && (
-            <IconButton component="a" href={(project as { external?: string }).external}>
+            <IconButton
+              component="a"
+              href={(project as { external?: string }).external}
+            >
               <LinkIcon />
             </IconButton>
           )}
