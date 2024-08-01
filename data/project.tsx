@@ -11,57 +11,33 @@ export const WEB_APPS = [
       "HTML & CSS",
     ],
     description:
-      "Developed a proof-of-concept Healthcare Correspondence Chatbot utilizing OCR, Chroma database, LLama 2 LLM, and a user-friendly web interface to simplify document searches for healthcare professionals.",
+      "Developed a proof-of-concept Healthcare Correspondence Chatbot using OCR, Chroma database, LLama 2 LLM, and a user-friendly web interface to streamline document searches for healthcare professionals. Collaborated in a team to process and store over 10,000 healthcare correspondence documents, integrating OCR, data vectorization, and semantic similarity search for efficient retrieval. Optimized LLM performance with GPU-based inference on AWS, reducing response time from 2.5 minutes to 15 seconds, and conducted thorough testing to ensure high accuracy in answering user queries.",
     thumbnail: "#",
     repo: "#",
   },
   {
     title: "Brain Tumor Detection – Undergrad Research",
     repo: "https://github.com/adarshaacharya/CsOverflow",
-    thumbnail: "/_static/projects/csoverflow.png",
+    thumbnail: "#",
     description:
-      "Q/A forum for Computer Science and Engineering students. Ask a question, contribute an answer and upvote your favourite one.",
-    tags: ["Typescript", "React", "Redux", "Nodejs", "PostgreSQL"],
+      "Conducted a comprehensive analysis of advanced machine learning techniques, including InceptionV3, ResNet, VGG, YOLOv9, GELAN, and Xception, for accurate brain tumor classification using MRI scans. Developed an ensemble model combining InceptionV3, ResNet, and VGG classifiers, achieving a superior accuracy of 0.956, showcasing the effectiveness of ensemble learning in medical image analysis. Utilized state-of-the-art deep learning architectures like YOLOv9 and GELAN-C, and optimized training techniques to enhance brain tumor detection accuracy, contributing to the advancement of medical imaging and diagnosis.",
+    tags: [
+      "Python",
+      "YOLOv9 ",
+      "InceptionV3",
+      "ResNet",
+      "VGG",
+      "Xception",
+      "GELAN",
+    ],
   },
   {
-    title: "Pass Man",
-    repo: "https://github.com/adarshaacharya/PassMan",
-    demo: "https://passmanager.vercel.app/",
+    title: "MoodTunes – HackUTD X Golden Hour",
+    repo: "#",
+    demo: "https://devpost.com/software/moodtunes-saq3b4",
     thumbnail: "/_static/projects/passman.png",
     description:
-      "Cloud based password manager, create vault for personal and business purpose and store the credentials of different type. Credentials are hashed using AES256 algorithm, and one way hashing is done using Scrypt algorithm.",
-    tags: ["Next.js", "Next Auth", "Prisma", "Docker", "Chakra UI"],
-  },
-  {
-    title: "Code Treats",
-    repo: "https://github.com/adarshaacharya/CodeTreats",
-    thumbnail: "/_static/projects/codetreats.png",
-    description:
-      "In-browser IDE for running, collaborating and saving code snippets. Code Treats supports 10+ languages and 15+ beautiful themes with VS code like text editor. Multiple users can sit on same room, collaborate and talk on real-time.",
-    tags: ["Typescript", "React", "Nodejs", "MongoDB", "Socket"],
-  },
-  {
-    title: "E-Complaints",
-    repo: "https://github.com/adarshaacharya/E-Complaints",
-    thumbnail: "/_static/projects/ecomplaints.png",
-    description:
-      "A public complaint management app that helps user to send the compaints to different government departments, admin can filter & forward complaints to respective department and department officer will reply to that complaint.",
-    tags: ["Node.js", "Express", "Ejs", "MongoDB"],
-  },
-  {
-    title: "Node.js Blog System",
-    repo: "https://github.com/adarshaacharya/NodejsBlogSystem",
-    thumbnail: "/_static/projects/blog.png",
-    description:
-      "Boilerplate for starting the blogging using Node JS, MongoDB and Socket for real time update. User can create profile, post & make comments on posts.",
-    tags: ["Node.js", "Express", "Ejs", "MongoDB"],
-  },
-  {
-    title: "Tour 360°",
-    repo: "https://github.com/adarshaacharya/Tour360",
-    thumbnail: "/_static/projects/tour360.png",
-    description:
-      "Tour 360° is a virtual reality viewing platform build for VisitNepal2020 that helps to view 360 thumbnails & book flights airplane, hotels hotel and guides boy.",
-    tags: ["Php", "MySQL", "Aws"],
+      "Developed and implemented facial emotion recognition models using convolutional neural networks to detect user emotions from video in real-time with over 90% accuracy. Built a backend system to analyze video from the user webcam, extract facial frames, run recognition models, and return emotion analysis results to the frontend in under 100ms per frame.",
+    tags: ["Python", "Keras", "NextJS", "TensorFlow", "Flask API", "OpenCV"],
   },
 ] as const;
