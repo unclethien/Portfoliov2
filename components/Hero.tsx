@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Mail";
-import BoundedLayout from "./ResponsiveGrid";
+import ResponsiveGrid from "./ResponsiveGrid";
 import Card from "./Card";
 import useMeasure from "react-use-measure";
 import { omit, set } from "lodash";
@@ -226,28 +226,9 @@ export default function Hero() {
             ))}
           </motion.div>
         </Box>
-        <Box
-          // className="m"
-          sx={(theme) => ({
-            mt: { xs: 8, sm: 10 },
-            alignSelf: "center",
-            height: { xs: 700, sm: 700 },
-            width: { xs: "100%", sm: "90%", md: "80%" }, // Adjust width for different screen sizes
-            backgroundSize: "cover",
-            borderRadius: "10px",
-            outline: "1px solid",
-            outlineColor:
-              theme.palette.mode === "light"
-                ? alpha("#BFCCD9", 0.5)
-                : alpha("#9CCCFC", 0.1),
-            boxShadow:
-              theme.palette.mode === "light"
-                ? `0 0 12px 8px ${alpha("#9CCCFC", 0.2)}`
-                : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
-          })}
-        >
-          <BoundedLayout />
-        </Box>
+        
+        <ResponsiveGrid />
+        
       </Container>
     </Box>
   );
