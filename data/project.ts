@@ -1,4 +1,4 @@
-export const WEB_APPS = [
+export const My_Project = [
   {
     title: "Healthcare Correspondence LLM",
     thumbnail: "/projects_thumbnails/Healthcare LLM.png",

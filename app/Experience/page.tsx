@@ -12,7 +12,7 @@ import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import AppAppBar from "@/components/AppAppBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
-import LeftAlignedTimeline from "../../components/Experience/LeftAlignedTimeline";
+import LeftAlignedTimeline from "../../components/Experience/TimelineExperience";
 import Container from "@mui/material/Container";
 
 export default function Home() {

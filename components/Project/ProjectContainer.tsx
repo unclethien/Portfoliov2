@@ -1,6 +1,6 @@
 import React from "react";
 import { generatePageMetadata } from "@/app/seo";
-import { WEB_APPS } from "@/data/project";
+import { My_Project } from "@/data/project";
 import Image from "next/image";
 import {
   Container,
@@ -22,7 +22,7 @@ export const metadata = generatePageMetadata({
 });
 
 type Props = {
-  project: (typeof WEB_APPS)[number];
+  project: (typeof My_Project)[number];
 };
 
 const ProjectCard = ({ project }: Props) => {
@@ -58,7 +58,7 @@ const ProjectCard = ({ project }: Props) => {
           ))}
         </Box>
         <Box display="flex" justifyContent="flex-end">
-          <IconButton component="a" href={project.repo}>
+          <IconButton component="a" href={(project as { repo?: string }).repo}>
             <GitHubIcon />
           </IconButton>
           {(project as { external?: string }).external && (
@@ -83,7 +83,7 @@ export default function Projects() {
           Web apps
         </Typography>
         <Grid container spacing={4}>
-          {WEB_APPS.map((project, idx) => (
+          {My_Project.map((project, idx) => (
             <Grid item xs={12} sm={6} key={idx}>
               <ProjectCard project={project} />
             </Grid>
