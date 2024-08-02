@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import { WidthProvider, Responsive, Layout } from "react-grid-layout";
-import Box from "@mui/material/Box";
+import { Box, Chip, IconButton, Card, CardContent } from "@mui/material";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import _ from "lodash";
 import { useTheme } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { alpha, Container } from "@mui/material";
+import { My_Project } from "@/data/project";
+import Image from "next/image";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkIcon from "@mui/icons-material/Link";
+import { wrap } from "module";
 
 const ReactGridLayout = WidthProvider(Responsive);
 
 const initialLayout: Layout[] = [
-  { i: "a", x: 0, y: 0, w: 12, h: 2 },
-  { i: "b", x: 0, y: 3, w: 4, h: 4 },
-  { i: "c", x: 4, y: 3, w: 4, h: 2 },
-  { i: "d", x: 8, y: 3, w: 4, h: 2 },
-  { i: "e", x: 5, y: 4, w: 8, h: 2 },
+  { i: "0", x: 0, y: 0, w: 7, h: 8 },
+  { i: "1", x: 7, y: 0, w: 5, h: 4 },
+  { i: "2", x: 7, y: 4, w: 5, h: 4 },
+  { i: "3", x: 0, y: 8, w: 6, h: 2 },
+  { i: "4", x: 7, y: 8, w: 6, h: 2 },
 ];
 
 const whiteLogos = [
@@ -50,6 +55,62 @@ const ResponsiveGrid: React.FC = () => {
     setLayout(newLayout);
     console.log("Layout changed:", newLayout);
   };
+  type Props = {
+    project: (typeof My_Project)[number];
+  };
+  const HomeProjectCard = ({ project }: Props) => {
+    return (
+      <Card
+        variant="outlined"
+        key={project.title}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          cursor: "pointer",
+          "&:hover": { backgroundColor: "background.default" },
+          "flex-wrap": "wrap",
+        }}
+      >
+        <Image
+          src={project.thumbnail}
+          alt={`${project.title}`}
+          style={{ width: "100%", height: "auto", borderRadius: "4px 4px 0 0" }}
+          width={100} // Adjust width for different screen sizes
+          height={100} // Replace '100' with the desired height value
+          unoptimized
+        />
+        <CardContent>
+          <Typography variant="h6" gutterBottom>
+            {project.title}
+          </Typography>
+          <Typography color="textSecondary" paragraph>
+            {project.overal}
+          </Typography>
+          <Box display="flex" flexWrap="wrap" gap={1} mb={2}>
+            {project.tags.map((techStackItem) => (
+              <Chip label={techStackItem} key={techStackItem} />
+            ))}
+          </Box>
+          <Box display="flex" justifyContent="flex-end">
+            <IconButton
+              component="a"
+              href={(project as { repo?: string }).repo}
+            >
+              <GitHubIcon />
+            </IconButton>
+            {(project as { external?: string }).external && (
+              <IconButton
+                component="a"
+                href={(project as { external?: string }).external}
+              >
+                <LinkIcon />
+              </IconButton>
+            )}
+          </Box>
+        </CardContent>
+      </Card>
+    );
+  };
 
   return (
     <Container
@@ -82,32 +143,34 @@ const ResponsiveGrid: React.FC = () => {
         isResizable={true}
         onLayoutChange={onLayoutChange}
       >
-        <Box
-          key="a"
-          data-grid={layout.find((item) => item.i === "a")}
-          sx={(theme) => ({
-            border: "1px solid",
-            borderColor: "grey.300",
-            padding: 2,
-            width: { sm: "100%", md: "60%" },
-            textAlign: { sm: "left", md: "center" },
-            background: (theme) =>
-              theme.palette.mode === "light" ? "" : "none",
-            backgroundColor: "primary.contrastText",
-            outlineColor:
-              theme.palette.mode === "light"
-                ? alpha("#BFCCD9", 0.5)
-                : alpha("#9CCCFC", 0.1),
-          })}
-        >
-          <Typography variant="body1" color="text.secondary">
-            See what our customers love about our products. Discover how we
-            excel in efficiency, durability, and satisfaction. Join us for
-            quality, innovation, and reliable support.
-          </Typography>
-        </Box>
-        <Box
-          key="b"
+        {My_Project.map((project, idx) => (
+          <Box
+            key={idx}
+            data-grid={layout.find((item) => item.i === "a")}
+            sx={(theme) => ({
+              border: "1px solid",
+              borderColor: "grey.300",
+              padding: 2,
+              width: { sm: "100%", md: "60%" },
+              textAlign: { sm: "left", md: "center" },
+              colorInterpolationursor: "pointer",
+              "&:hover": { backgroundColor: "background.default" },
+              background: (theme) =>
+                theme.palette.mode === "light" ? "" : "none",
+              backgroundColor: "primary.contrastText",
+              outlineColor:
+                theme.palette.mode === "light"
+                  ? alpha("#BFCCD9", 0.5)
+                  : alpha("#9CCCFC", 0.1),
+            })}
+          >
+            <HomeProjectCard project={project} />
+          </Box>
+        ))}
+      </ReactGridLayout>
+
+      {/* <Box
+          key="project2"
           data-grid={layout.find((item) => item.i === "b")}
           sx={(theme) => ({
             border: "1px solid",
@@ -131,7 +194,7 @@ const ResponsiveGrid: React.FC = () => {
           b
         </Box>
         <Box
-          key="c"
+          key="project3"
           data-grid={layout.find((item) => item.i === "c")}
           sx={(theme) => ({
             border: "1px solid",
@@ -155,7 +218,7 @@ const ResponsiveGrid: React.FC = () => {
           c
         </Box>
         <Box
-          key="d"
+          key="project4"
           data-grid={layout.find((item) => item.i === "d")}
           sx={(theme) => ({
             border: "1px solid",
@@ -179,7 +242,7 @@ const ResponsiveGrid: React.FC = () => {
           d
         </Box>
         <Box
-          key="e"
+          key="project5"
           data-grid={layout.find((item) => item.i === "e")}
           sx={(theme) => ({
             border: "1px solid",
@@ -201,8 +264,7 @@ const ResponsiveGrid: React.FC = () => {
           })}
         >
           e
-        </Box>
-      </ReactGridLayout>
+        </Box> */}
     </Container>
   );
 };
