@@ -60,17 +60,21 @@ export default function TimelineExperience() {
                     {index < My_Experience.length - 1 && <TimelineConnector />}
                   </TimelineSeparator>
                   <TimelineContent>
-                    <Typography variant="h5" color="text.secondary">
+                    <Typography
+                      variant="h6"
+                      color="text.secondary"
+                      className="mb-0.5"
+                    >
                       {date}
                     </Typography>
                     <Typography
-                      variant="h5"
+                      variant="h4"
                       color="text.primary"
                       component="span"
                     >
                       {title}
                     </Typography>
-                    <Typography variant="subtitle1">
+                    <Typography variant="h6" className="mb-3">
                       <Link
                         href={companyLink}
                         target="_blank"
@@ -85,12 +89,12 @@ export default function TimelineExperience() {
                         <Chip label={techStackItem} key={techStackItem} />
                       ))}
                     </Box>
-                    <Box>
+                    <Box className="mb-5">
                       {Array.isArray(content)
                         ? content.map((item, idx) => (
                             <Typography
                               variant="body1"
-                              color="text.secondary"
+                              color="text.primary"
                               key={idx}
                             >
                               {item}

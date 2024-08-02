@@ -3,13 +3,8 @@
 import * as React from "react";
 import { PaletteMode, Typography } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
-import AppAppBar from "@/components/AppAppBar";
+import NavBar from "@/components/NavBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
 import About from "../../components/About/About";
@@ -32,9 +27,9 @@ export default function Home() {
     <>
       <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
         <CssBaseline />
-        <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
+        <NavBar mode={mode} toggleColorMode={toggleColorMode} />
         <About />
-        <Footer />
+        <Footer mode={mode}/>
       </ThemeProvider>
     </>
   );

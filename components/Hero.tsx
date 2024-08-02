@@ -3,9 +3,7 @@ import { alpha, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import portrait_1 from "../public/potrait 1.jpeg";
@@ -16,7 +14,6 @@ import EmailIcon from "@mui/icons-material/Mail";
 import ResponsiveGrid from "./ResponsiveGrid";
 import Card from "./Card";
 import useMeasure from "react-use-measure";
-import { omit, set } from "lodash";
 import { animate, motion, useMotionValue } from "framer-motion";
 
 export default function Hero() {

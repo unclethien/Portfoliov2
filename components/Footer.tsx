@@ -1,18 +1,19 @@
 import * as React from "react";
+import { PaletteMode } from "@mui/material";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import { useRouter } from "next/navigation";
 
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import Image from "next/image";
-import logo from "../public/Logo.svg";
+import logoLight from "../public/LogoLight.svg";
+import logoDark from "../public/LogoDark.svg";
 
 const logoStyle = {
   width: "90px",
@@ -20,8 +21,14 @@ const logoStyle = {
   height: "auto",
   cursor: "pointer",
 };
+interface FooterProps {
+  mode: PaletteMode;
+}
 
-export default function Footer() {
+export default function Footer({ mode }: FooterProps) {
+  // Choose the appropriate logo based on the mode
+  const logo = mode === "light" ? logoLight : logoDark;
+  const router = useRouter();
   return (
     <Container
       sx={{
@@ -50,7 +57,12 @@ export default function Footer() {
           }}
         >
           <Box>
-            <Image alt="Profile Logo" src={logo} style={logoStyle} />
+            <Image
+              alt="Profile Logo"
+              src={logo}
+              style={logoStyle}
+              onClick={() => router.push("/")}
+            />
           </Box>
         </Box>
         <Box
@@ -63,23 +75,20 @@ export default function Footer() {
             flexDirection: { xs: "column", sm: "row" },
           }}
         >
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="/About">
             About
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="/Project">
             Project
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="/Experience">
             Experience
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="/Education">
             Education
           </Link>
-          <Link color="text.secondary" href="#">
-            Blog
-          </Link>
-          <Link color="text.secondary" href="#">
-            Contact
+          <Link color="text.secondary" href="/Blog">
+            Blog(Comming Soon)
           </Link>
         </Box>
       </Box>
@@ -95,9 +104,10 @@ export default function Footer() {
       >
         <div>
           <Typography variant="body2" color="text.secondary" mt={1}>
-            {"Copyright © "}
-            <Link href="#">Thien Nguyen&nbsp;</Link>
+            {"© "}
             {new Date().getFullYear()}
+            <Link href="#">&nbsp;Thien Nguyen.&nbsp;</Link>
+            {"All rights reserved."}
           </Typography>
         </div>
         <Stack

@@ -1,18 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { alpha, PaletteMode, Typography } from "@mui/material";
+import { alpha, PaletteMode } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
-import AppAppBar from "@/components/AppAppBar";
+import NavBar from "@/components/NavBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
-import LeftAlignedTimeline from "../../components/Experience/TimelineExperience";
 import Container from "@mui/material/Container";
 import ProjectContainer from "../../components/Project/ProjectContainer";
 
@@ -53,9 +48,9 @@ export default function Home() {
               pb: { xs: 8, sm: 12 },
             }}
           >
-            <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
+            <NavBar mode={mode} toggleColorMode={toggleColorMode} />
             <ProjectContainer />
-            <Footer />
+            <Footer mode={mode}/>
           </Container>
         </Box>
       </ThemeProvider>

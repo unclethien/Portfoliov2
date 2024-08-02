@@ -9,7 +9,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
-import AppAppBar from "@/components/AppAppBar";
+import NavBar from "@/components/NavBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
 import LeftAlignedTimeline from "../../components/Experience/TimelineExperience";
@@ -53,9 +53,9 @@ export default function Home() {
               pb: { xs: 8, sm: 12 },
             }}
           >
-            <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
+            <NavBar mode={mode} toggleColorMode={toggleColorMode} />
 
-            <Footer />
+            <Footer mode={mode}/>
           </Container>
         </Box>
       </ThemeProvider>

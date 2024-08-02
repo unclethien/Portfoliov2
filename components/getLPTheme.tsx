@@ -2,6 +2,10 @@ import type {} from "@mui/material/themeCssVarsAugmentation";
 import { ThemeOptions, alpha } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 import { PaletteMode } from "@mui/material";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 declare module "@mui/material/styles/createPalette" {
   interface ColorRange {
@@ -153,7 +157,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
     },
   },
   typography: {
-    fontFamily: ['"Inter", "sans-serif"'].join(","),
+    fontFamily: ['"Inter","Roboto", "sans-serif"'].join(","),
     h1: {
       fontSize: 60,
       fontWeight: 600,
@@ -466,7 +470,7 @@ export default function getLPTheme(mode: PaletteMode): ThemeOptions {
               content: '""',
               position: "absolute",
               width: 0,
-              height: "1px",
+              height: "3px",
               bottom: 0,
               left: 0,
               backgroundColor: brand[200],

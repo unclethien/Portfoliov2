@@ -12,7 +12,8 @@ import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "./ToggleColorMode";
 import Image from "next/image";
-import logo from "../public/Logo.svg";
+import logoLight from "../public/LogoLight.svg";
+import logoDark from "../public/LogoDark.svg";
 import { useRouter } from "next/navigation";
 
 const logoStyle = {
@@ -27,7 +28,7 @@ interface AppAppBarProps {
   toggleColorMode: () => void;
 }
 
-function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
+function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
   const [open, setOpen] = React.useState(false);
   const router = useRouter();
 
@@ -48,6 +49,9 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
       setOpen(false);
     }
   };
+
+  // Choose the appropriate logo based on the mode
+  const logo = mode === "light" ? logoLight : logoDark;
 
   return (
     <div>
@@ -132,19 +136,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection("faq")}
+                  onClick={() => router.push("/Blog")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Blog
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("faq")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Contact
+                    Blog(Comming Soon)
                   </Typography>
                 </MenuItem>
               </Box>
@@ -162,7 +158,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 variant="contained"
                 size="small"
                 component="a"
-                href="#"
+                href="/Thien-Nguyen_Resume.pdf"
                 target="_blank"
               >
                 Get my CV
@@ -200,30 +196,20 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection("features")}>
-                    Home
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("features")}>
+                  <MenuItem onClick={() => router.push("/About")}>
                     About
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("testimonials")}>
+                  <MenuItem onClick={() => router.push("/Project")}>
                     Project
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("pricing")}>
+                  <MenuItem onClick={() => router.push("/Experience")}>
                     Experience
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("highlights")}>
+                  <MenuItem onClick={() => router.push("/Education")}>
                     Education
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("pricing")}>
-                    Blog
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("pricing")}>
-                    Contact
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("faq")}>
-                    FAQ
-                  </MenuItem>
+                  <MenuItem onClick={() => router.push("/Blog")}>Blog</MenuItem>
+
                   <Divider />
                   <MenuItem>
                     <Button
@@ -247,4 +233,4 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
   );
 }
 
-export default AppAppBar;
+export default NavBar;

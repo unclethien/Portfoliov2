@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { WidthProvider, Responsive, Layout } from "react-grid-layout";
 import Box from "@mui/material/Box";
 import "react-grid-layout/css/styles.css";
@@ -7,7 +7,6 @@ import _ from "lodash";
 import { useTheme } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { alpha, Container } from "@mui/material";
-import imageLight from "../public/static/images/imageLight.jpg";
 
 const ReactGridLayout = WidthProvider(Responsive);
 
