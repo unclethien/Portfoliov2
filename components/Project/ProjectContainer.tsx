@@ -58,9 +58,14 @@ const ProjectCard = ({ project }: Props) => {
           ))}
         </Box>
         <Box display="flex" justifyContent="flex-end">
-          <IconButton component="a" href={(project as { repo?: string }).repo}>
-            <GitHubIcon />
-          </IconButton>
+          {(project as { repo?: string }).repo && (
+            <IconButton
+              component="a"
+              href={(project as { repo?: string }).repo}
+            >
+              <GitHubIcon />
+            </IconButton>
+          )}
           {(project as { external?: string }).external && (
             <IconButton
               component="a"

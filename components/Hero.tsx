@@ -147,7 +147,7 @@ export default function Hero() {
                   variant="contained"
                   size="medium"
                   component="a"
-                  href="#"
+                  href="/Thien-Nguyen_Resume.pdf"
                   target="_blank"
                 >
                   Get my CV
@@ -223,9 +223,8 @@ export default function Hero() {
             ))}
           </motion.div>
         </Box>
-        
+
         <ResponsiveGrid />
-        
       </Container>
     </Box>
   );

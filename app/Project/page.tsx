@@ -13,21 +13,15 @@ import ProjectContainer from "../../components/Project/ProjectContainer";
 
 export default function Home() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
-  const [showCustomTheme, setShowCustomTheme] = React.useState(true);
   const LPtheme = createTheme(getLPTheme(mode));
-  const defaultTheme = createTheme({ palette: { mode } });
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
-  const toggleCustomTheme = () => {
-    setShowCustomTheme((prev) => !prev);
-  };
-
   return (
     <>
-      <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
+      <ThemeProvider theme={LPtheme}>
         <CssBaseline />
         <Box
           sx={(theme) => ({
@@ -50,7 +44,7 @@ export default function Home() {
           >
             <NavBar mode={mode} toggleColorMode={toggleColorMode} />
             <ProjectContainer />
-            <Footer mode={mode}/>
+            <Footer mode={mode} />
           </Container>
         </Box>
       </ThemeProvider>
