@@ -1,7 +1,7 @@
 export const My_Project = [
   {
     title: "Healthcare Correspondence LLM",
-    thumbnail: "./projects_thumbnails/Healthcare LLM.png",
+    thumbnail: "@projects_thumbnails/Healthcare LLM.png",
     repo: "https://github.com/unclethien",
     tags: [
       "Python",
@@ -20,7 +20,7 @@ export const My_Project = [
   {
     title: "Brain Tumor Detection – Undergrad Research",
     repo: "https://github.com/unclethien/Computer_Vision_UR",
-    thumbnail: "./projects_thumbnails/braintumor.jpg",
+    thumbnail: "@projects_thumbnails/braintumor.jpg",
     overal:
       "Developed an ensemble model with InceptionV3, ResNet, and VGG, achieving 95.6% accuracy in brain tumor classification using MRI scans.",
     description:
@@ -38,7 +38,7 @@ export const My_Project = [
   {
     title: "MoodTunes – HackUTD X Golden Hour",
     demo: "https://devpost.com/software/moodtunes-saq3b4",
-    thumbnail: "./projects_thumbnails/moodtunes.jpg",
+    thumbnail: "@projects_thumbnails/moodtunes.jpg",
     overal:
       "Developed real-time facial emotion recognition models with CNNs, achieving 90% accuracy and under 100ms per frame analysis.",
     description:
@@ -49,7 +49,7 @@ export const My_Project = [
     title:
       "Predicting Red Wine Quality from Chemical Properties using Machine Learning",
     repo: "https://github.com/unclethien/Predicting-Red-Wine-Quality-from-Chemical-Properties-using-Machine-Learning",
-    thumbnail: "/projects_thumbnails/redwine.jpg",
+    thumbnail: "@projects_thumbnails/redwine.jpg",
     overal:
       "Developed Python regression models for wine quality prediction, achieving 0.634 RMSE and identifying key quality drivers through analysis.",
     description:
@@ -60,7 +60,7 @@ export const My_Project = [
     title: "Esport Data Analysis",
     repo: "https://github.com/unclethien/Capstone-Project---Esport-Data-Analysis",
     demo: "https://public.tableau.com/app/profile/thien.nguyen7172/viz/EsportDataAnalysis/Capsstonepresentation",
-    thumbnail: "./projects_thumbnails/Esport.png",
+    thumbnail: "@projects_thumbnails/Esport.png",
     overal:
       "Analyzed 10,000 esports earnings data, revealing industry trends using Python for modeling and Tableau for visualization.",
     description:
