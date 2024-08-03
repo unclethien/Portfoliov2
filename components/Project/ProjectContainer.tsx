@@ -40,7 +40,13 @@ const ProjectCard = ({ project }: Props) => {
       <Image
         src={project.thumbnail}
         alt={`${project.title}`}
-        style={{ width: "100%", height: "auto", borderRadius: "4px 4px 0 0" }}
+        style={{
+          width: "80%",
+          height: "auto",
+          borderRadius: "4px 4px 0 0",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
         width={0}
         height={0}
         unoptimized
