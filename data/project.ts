@@ -7,7 +7,7 @@ import moodtunes from "../public/projects_thumbnails/moodtunes.jpg";
 export const My_Project = [
   {
     title: "Healthcare Correspondence LLM",
-    thumbnail: { healthcarellm },
+    thumbnail: healthcarellm,
     repo: "https://github.com/unclethien",
     tags: [
       "Python",
@@ -26,7 +26,7 @@ export const My_Project = [
   {
     title: "Brain Tumor Detection – Undergrad Research",
     repo: "https://github.com/unclethien/Computer_Vision_UR",
-    thumbnail: { braintumor },
+    thumbnail: braintumor,
     overal:
       "Developed an ensemble model with InceptionV3, ResNet, and VGG, achieving 95.6% accuracy in brain tumor classification using MRI scans.",
     description:
@@ -44,7 +44,7 @@ export const My_Project = [
   {
     title: "MoodTunes – HackUTD X Golden Hour",
     demo: "https://devpost.com/software/moodtunes-saq3b4",
-    thumbnail: { moodtunes },
+    thumbnail: moodtunes,
     overal:
       "Developed real-time facial emotion recognition models with CNNs, achieving 90% accuracy and under 100ms per frame analysis.",
     description:
@@ -66,7 +66,7 @@ export const My_Project = [
     title: "Esport Data Analysis",
     repo: "https://github.com/unclethien/Capstone-Project---Esport-Data-Analysis",
     demo: "https://public.tableau.com/app/profile/thien.nguyen7172/viz/EsportDataAnalysis/Capsstonepresentation",
-    thumbnail: { Esport },
+    thumbnail: Esport,
     overal:
       "Analyzed 10,000 esports earnings data, revealing industry trends using Python for modeling and Tableau for visualization.",
     description:

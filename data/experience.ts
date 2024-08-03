@@ -9,7 +9,7 @@ export const My_Experience = [
     company: "The Erik Jonsson School at UT Dallas",
     companyLink: "https://engineering.utdallas.edu/",
     date: "Jun 2024 - Now",
-    thumbnail: { utd },
+    thumbnail: utd,
     tags: [
       "Jira",
       "WordPress ",
@@ -28,7 +28,7 @@ export const My_Experience = [
     company: "VINCEF at UT Dallas",
     companyLink: "https://vincef.org/",
     date: "May 2023 – May 2024",
-    thumbnail: { vincef2324 },
+    thumbnail:vincef2324,
     tags: [
       "Leadership",
       "Teamwork and Collaboration",
@@ -50,7 +50,7 @@ export const My_Experience = [
     company: "VINCEF at UT Dallas",
     companyLink: "https://vincef.org/",
     date: "Aug 2018 – May 2021",
-    thumbnail: { vincef2223 },
+    thumbnail: vincef2223,
     tags: [
       "Teamwork and Collaboration",
       "Problem-Solving Skills",
@@ -69,7 +69,7 @@ export const My_Experience = [
     title: "Producer Assistant",
     company: "Priority Insurance Agency",
     companyLink: "https://www.bestpriority.com/",
-    thumbnail: { priority },
+    thumbnail: priority,
     date: "Jun 2017 - Feb 2020",
     tags: [
       "Customer Service",
