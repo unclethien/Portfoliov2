@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   Container,
+  Link,
 } from "@mui/material";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
@@ -23,11 +24,9 @@ import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
 const ReactGridLayout = WidthProvider(Responsive);
 
 const initialLayout: Layout[] = [
-  { i: "0", x: 0, y: 0, w: 7, h: 10 },
-  { i: "1", x: 7, y: 0, w: 5, h: 7 },
-  { i: "2", x: 7, y: 4, w: 5, h: 7 },
-  { i: "3", x: 0, y: 8, w: 7, h: 10 },
-  { i: "4", x: 7, y: 8, w: 5, h: 7 },
+  { i: "0", x: 0, y: 0, w: 12, h: 9 },
+  { i: "1", x: 0, y: 9, w: 6, h: 7 },
+  { i: "2", x: 6, y: 9, w: 6, h: 7 },
 ];
 
 const ResponsiveGrid: React.FC = () => {
@@ -48,6 +47,7 @@ const ResponsiveGrid: React.FC = () => {
         width: { xs: "100%", sm: "90%", md: "80%" },
         backgroundSize: "cover",
         borderRadius: "10px",
+        padding: 2,
         outline: "1px solid",
         outlineColor:
           theme.palette.mode === "light"
@@ -70,7 +70,7 @@ const ResponsiveGrid: React.FC = () => {
         onLayoutChange={onLayoutChange}
         draggableHandle=".drag-handle"
       >
-        {My_Project.map((project, idx) => (
+        {My_Project.slice(0, 3).map((project, idx) => (
           <Card
             key={idx}
             data-grid={layout.find((item) => item.i === idx.toString())}
@@ -91,8 +91,10 @@ const ResponsiveGrid: React.FC = () => {
               alt={`${project.title}`}
               style={{
                 width: "auto",
-                height: "auto",
+                maxHeight: "300px",
                 borderRadius: "4px 4px 0 0",
+                margin: "auto",
+                display: "flex",
               }}
               width={100}
               height={100}
@@ -145,6 +147,14 @@ const ResponsiveGrid: React.FC = () => {
           </Card>
         ))}
       </ReactGridLayout>
+      <Link
+        href="/projects"
+        variant="subtitle1"
+        color="primary"
+        className="m-4"
+      >
+        View all projects
+      </Link>
     </Container>
   );
 };
