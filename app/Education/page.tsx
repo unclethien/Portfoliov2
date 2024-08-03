@@ -14,6 +14,7 @@ import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
 import LeftAlignedTimeline from "../../components/Experience/TimelineExperience";
 import Container from "@mui/material/Container";
+import TimelineEducation from "@/components/Education/TimelineEducation";
 
 export default function Home() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
@@ -48,8 +49,8 @@ export default function Home() {
             }}
           >
             <NavBar mode={mode} toggleColorMode={toggleColorMode} />
-
-            <Footer mode={mode}/>
+            <TimelineEducation />
+            <Footer mode={mode} />
           </Container>
         </Box>
       </ThemeProvider>

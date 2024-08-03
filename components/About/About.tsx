@@ -1,11 +1,8 @@
 import * as React from "react";
 import { alpha, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import portrait_2 from "../../public/potrait 2.jpeg";
@@ -14,8 +11,6 @@ import IconButton from "@mui/material/IconButton";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
-import ResponsiveGrid from "../ResponsiveGrid";
-import { space } from "postcss/lib/list";
 
 export default function About() {
   return (

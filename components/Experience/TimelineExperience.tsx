@@ -1,6 +1,13 @@
 import React, { useRef } from "react";
-import { Typography, Box, Grid, Chip, Link } from "@mui/material";
-
+import {
+  Typography,
+  Box,
+  Grid,
+  Chip,
+  Link,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import {
   Timeline,
   TimelineItem,
@@ -11,10 +18,13 @@ import {
   timelineItemClasses,
 } from "@mui/lab";
 import { My_Experience } from "@/data/experience";
+import Image from "next/image";
 
 type ExperienceRefs = Array<React.RefObject<HTMLDivElement> | null>;
 
 export default function TimelineExperience() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const experienceRefs = useRef<ExperienceRefs>(
     new Array(My_Experience.length).fill(null)
   );
@@ -22,7 +32,7 @@ export default function TimelineExperience() {
   return (
     <Box>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={4}>
           <Typography
             component="h2"
             variant="h4"
@@ -43,17 +53,20 @@ export default function TimelineExperience() {
             that have shaped me into the engineer I am today.
           </Typography>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={12} md={8}>
           <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
                 flex: 0,
-                padding: 5,
+                padding: isMobile ? 0 : 5,
               },
             }}
           >
             {My_Experience.map(
-              ({ title, company, companyLink, date, tags, content }, index) => (
+              (
+                { title, company, companyLink, thumbnail, date, tags, content },
+                index
+              ) => (
                 <TimelineItem key={index}>
                   <TimelineSeparator>
                     <TimelineDot />
@@ -84,6 +97,16 @@ export default function TimelineExperience() {
                         {company}
                       </Link>
                     </Typography>
+                    {!isMobile && (
+                      <Box className="my-3">
+                        <Image
+                          src={thumbnail || ""}
+                          alt={company}
+                          height={300}
+                          width={600}
+                        />
+                      </Box>
+                    )}
                     <Box display="flex" flexWrap="wrap" gap={1} mb={2}>
                       {tags.map((techStackItem) => (
                         <Chip label={techStackItem} key={techStackItem} />
