@@ -61,7 +61,7 @@ export default function Footer({ mode }: FooterProps) {
               alt="Profile Logo"
               src={logo}
               style={logoStyle}
-              onClick={() => router.push("./")}
+              onClick={() => router.push("/")}
             />
           </Box>
         </Box>
@@ -75,19 +75,19 @@ export default function Footer({ mode }: FooterProps) {
             flexDirection: { xs: "column", sm: "row" },
           }}
         >
-          <Link color="text.secondary" href="./About">
+          <Link color="text.secondary" href="/About">
             About
           </Link>
-          <Link color="text.secondary" href="./Project">
+          <Link color="text.secondary" href="/Project">
             Project
           </Link>
-          <Link color="text.secondary" href="./Experience">
+          <Link color="text.secondary" href="/Experience">
             Experience
           </Link>
-          <Link color="text.secondary" href="./Education">
+          <Link color="text.secondary" href="/Education">
             Education
           </Link>
-          <Link color="text.secondary" href="./Blog">
+          <Link color="text.secondary" href="/Blog">
             Blog(Comming Soon)
           </Link>
         </Box>

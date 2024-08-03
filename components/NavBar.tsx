@@ -86,11 +86,11 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                 alt="Profile Logo"
                 src={logo}
                 style={logoStyle}
-                onClick={() => router.push("./")}
+                onClick={() => router.push("/")}
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem
-                  onClick={() => router.push("./About")}
+                  onClick={() => router.push("/About")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -98,7 +98,7 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => router.push("./Project")}
+                  onClick={() => router.push("/Project")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -106,7 +106,7 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => router.push("./Experience")}
+                  onClick={() => router.push("/Experience")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -114,7 +114,7 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => router.push("./Education")}
+                  onClick={() => router.push("/Education")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -122,7 +122,7 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => router.push("./Blog")}
+                  onClick={() => router.push("/Blog")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
@@ -182,19 +182,19 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
-                  <MenuItem onClick={() => router.push("./About")}>
+                  <MenuItem onClick={() => router.push("/About")}>
                     About
                   </MenuItem>
-                  <MenuItem onClick={() => router.push("./Project")}>
+                  <MenuItem onClick={() => router.push("/Project")}>
                     Project
                   </MenuItem>
-                  <MenuItem onClick={() => router.push("./Experience")}>
+                  <MenuItem onClick={() => router.push("/Experience")}>
                     Experience
                   </MenuItem>
-                  <MenuItem onClick={() => router.push("./Education")}>
+                  <MenuItem onClick={() => router.push("/Education")}>
                     Education
                   </MenuItem>
-                  <MenuItem onClick={() => router.push("./Blog")}>Blog</MenuItem>
+                  <MenuItem onClick={() => router.push("/Blog")}>Blog</MenuItem>
 
                   <Divider />
                   <MenuItem>
