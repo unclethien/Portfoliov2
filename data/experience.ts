@@ -1,10 +1,15 @@
+import utd from "../public/experience/utd-erik jonsson school.jpg";
+import vincef2324 from "../public/experience/Vincef Banquet 2023-2024.jpg";
+import vincef2223 from "../public/experience/Vincef Banquet 2022-2023.jpg";
+import priority from "../public/experience/Priority-Insurance-Logo.png";
+
 export const My_Experience = [
   {
     title: "Web Specialist (Part-time)",
     company: "The Erik Jonsson School at UT Dallas",
     companyLink: "https://engineering.utdallas.edu/",
     date: "Jun 2024 - Now",
-    thumbnail: "/experience/utd-erik jonsson school.jpg",
+    thumbnail: { utd },
     tags: [
       "Jira",
       "WordPress ",
@@ -23,7 +28,7 @@ export const My_Experience = [
     company: "VINCEF at UT Dallas",
     companyLink: "https://vincef.org/",
     date: "May 2023 – May 2024",
-    thumbnail: "/experience/Vincef Banquet 2023-2024.jpg",
+    thumbnail: { vincef2324 },
     tags: [
       "Leadership",
       "Teamwork and Collaboration",
@@ -45,7 +50,7 @@ export const My_Experience = [
     company: "VINCEF at UT Dallas",
     companyLink: "https://vincef.org/",
     date: "Aug 2018 – May 2021",
-    thumbnail: "/experience/Vincef Banquet 2022-2023.jpg",
+    thumbnail: { vincef2223 },
     tags: [
       "Teamwork and Collaboration",
       "Problem-Solving Skills",
@@ -64,7 +69,7 @@ export const My_Experience = [
     title: "Producer Assistant",
     company: "Priority Insurance Agency",
     companyLink: "https://www.bestpriority.com/",
-    thumbnail: "/experience/Priority-Insurance-Logo.png",
+    thumbnail: { priority },
     date: "Jun 2017 - Feb 2020",
     tags: [
       "Customer Service",
