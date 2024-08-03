@@ -1,7 +1,7 @@
 export const My_Project = [
   {
     title: "Healthcare Correspondence LLM",
-    thumbnail: "/projects_thumbnails/HealthcareLLM.png",
+    thumbnail: "/projects_thumbnails/healthcare.jpg",
     repo: "https://github.com/unclethien",
     tags: [
       "Python",
@@ -60,7 +60,7 @@ export const My_Project = [
     title: "Esport Data Analysis",
     repo: "https://github.com/unclethien/Capstone-Project---Esport-Data-Analysis",
     demo: "https://public.tableau.com/app/profile/thien.nguyen7172/viz/EsportDataAnalysis/Capsstonepresentation",
-    thumbnail: "/projects_thumbnails/Esport.png",
+    thumbnail: "/projects_thumbnails/esport.png",
     overal:
       "Analyzed 10,000 esports earnings data, revealing industry trends using Python for modeling and Tableau for visualization.",
     description:
