@@ -144,7 +144,7 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                 variant="contained"
                 size="small"
                 component="a"
-                href="/Thien-Nguyen_Resume.pdf"
+                href="./Thien-Nguyen_Resume.pdf"
                 target="_blank"
               >
                 Get my CV
@@ -202,7 +202,7 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                       color="primary"
                       variant="contained"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
+                      href="./Thien-Nguyen_Resume.pdf"
                       target="_blank"
                       sx={{ width: "100%" }}
                     >

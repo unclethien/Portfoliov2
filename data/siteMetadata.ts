@@ -2,7 +2,7 @@ export const siteMetadata = {
   title: "Thien Nguyen's Portfolio",
   author: "Thien Nguyen",
   siteUrl: "thiennguyen.net",
-  socialBanner: "/public/Logo.png",
+  socialBanner: "./Logo.png",
   description:
     "Thien Nguyen - a software engineer, a food lover, an enthusiast for 3D printing and custom keyboards, and a cat person",
   keywords: [
