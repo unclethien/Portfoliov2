@@ -100,7 +100,7 @@ export default function TimelineExperience() {
                     {!isMobile && (
                       <Box className="my-3">
                         <Image
-                          src={thumbnail || ""}
+                          src={thumbnail}
                           alt={company}
                           height={300}
                           width={600}

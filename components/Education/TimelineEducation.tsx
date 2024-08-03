@@ -106,7 +106,7 @@ export default function TimelineEducation() {
                     {!isMobile && (
                       <Box className="my-3">
                         <Image
-                          src={thumbnail || ""}
+                          src={thumbnail}
                           alt={institution}
                           height={300}
                           width={600}
