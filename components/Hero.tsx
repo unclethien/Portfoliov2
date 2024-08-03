@@ -18,16 +18,16 @@ import { animate, motion, useMotionValue } from "framer-motion";
 
 export default function Hero() {
   const images = [
-    "/images/Image 1.jpeg",
-    "/images/Image 2.jpg",
-    "/images/Image 3.jpeg",
-    "/images/Image 4.jpg",
-    "/images/Image 5.jpeg",
-    "/images/Image 6.jpeg",
-    "/images/Image 7.jpeg",
-    "/images/Image 8.jpeg",
-    "/images/Image 9.jpeg",
-    "/images/Image 10.jpeg",
+    "./images/Image 1.jpeg",
+    "./images/Image 2.jpg",
+    "./images/Image 3.jpeg",
+    "./images/Image 4.jpg",
+    "./images/Image 5.jpeg",
+    "./images/Image 6.jpeg",
+    "./images/Image 7.jpeg",
+    "./images/Image 8.jpeg",
+    "./images/Image 9.jpeg",
+    "./images/Image 10.jpeg",
   ];
 
   const FAST_DURATION = 15;
