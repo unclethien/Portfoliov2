@@ -1,7 +1,7 @@
 export const My_Project = [
   {
     title: "Healthcare Correspondence LLM",
-    thumbnail: "/projects_thumbnails/Healthcare LLM.png",
+    thumbnail: "/projects_thumbnails/HealthcareLLM.png",
     repo: "https://github.com/unclethien",
     tags: [
       "Python",
