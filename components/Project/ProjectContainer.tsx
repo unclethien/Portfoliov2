@@ -51,7 +51,6 @@ const ProjectCard = ({ project }: Props) => {
         }}
         width={0}
         height={0}
-        unoptimized
       />
       <CardContent>
         <Typography variant="h6" gutterBottom>
