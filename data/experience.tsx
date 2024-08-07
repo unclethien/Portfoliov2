@@ -2,9 +2,9 @@ export const My_Experience = [
   {
     title: "Web Specialist (Part-time)",
     company: "The Erik Jonsson School at UT Dallas",
-    companyLink: "/experience/utd-erik jonsson school.jpg",
+    companyLink: "https://engineering.utdallas.edu/",
     date: "Jun 2024 - Now",
-    thumbnail: "/experience/utd-erik jonsson school.jpg",
+    thumbnail: "/experience/utd-erik-jonsson-school.jpg",
     tags: [
       "Jira",
       "WordPress ",
@@ -23,7 +23,7 @@ export const My_Experience = [
     company: "VINCEF at UT Dallas",
     companyLink: "https://vincef.org/",
     date: "May 2023 – May 2024",
-    thumbnail: "/experience/Vincef Banquet 2023-2024.jpg",
+    thumbnail: "/experience/Vincef-Banquet-2023-2024.jpg",
     tags: [
       "Leadership",
       "Teamwork and Collaboration",
@@ -45,7 +45,7 @@ export const My_Experience = [
     company: "VINCEF at UT Dallas",
     companyLink: "https://vincef.org/",
     date: "Aug 2018 – May 2021",
-    thumbnail: "/experience/Vincef Banquet 2022-2023.jpg",
+    thumbnail: "/experience/Vincef-Banquet-2022-2023.jpg",
     tags: [
       "Teamwork and Collaboration",
       "Problem-Solving Skills",

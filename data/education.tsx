@@ -4,7 +4,7 @@ export const My_Education = [
     institution: "The University of Texas at Dallas",
     institutionLink: "https://www.utdallas.edu/",
     date: "Aug 2024 – Dec 2026",
-    thumbnail: "/education/utd-computer science departmentl.jpg",
+    thumbnail: "/education/utd-computer-science-departmentl.jpg",
     content: [
       "I am thrilled to share that I will be embarking on a new chapter in my academic journey as a master's student in Computer Science at the University of Texas at Dallas starting next semester. This opportunity to further my education and delve deeper into the fascinating world of computer science fills me with excitement and anticipation. I am eager to explore advanced topics, engage in cutting-edge research, and collaborate with brilliant minds in the field. Pursuing a master's degree will not only expand my knowledge and skills but also open up new doors for personal and professional growth.",
     ],
@@ -14,7 +14,7 @@ export const My_Education = [
     institution: "The University of Texas at Dallas",
     institutionLink: "https://www.utdallas.edu/",
     date: "Jan 2022 – Aug 2024",
-    thumbnail: "/education/utd-computer science departmentl.jpg",
+    thumbnail: "/education/utd-computer-science-departmentl.jpg",
     content: [
       "As a senior Computer Science major at the University of Texas at Dallas, I am amazed at how quickly time has passed. I am on track to graduate in December 2024 and feel incredibly grateful for the remarkable projects and connections UTD has provided me. I am eager to leverage these valuable resources as I progress in my career journey. However, alongside this excitement, I must admit that a sense of nervousness is gradually setting in as job application deadlines approach. I would be immensely appreciative if you could refer me to any of your connections or contacts who are actively seeking candidates, as I am diligently searching for opportunities to launch my professional career upon graduation.",
     ],
