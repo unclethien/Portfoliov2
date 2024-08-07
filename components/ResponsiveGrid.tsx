@@ -20,13 +20,14 @@ import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
+import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 
 const ReactGridLayout = WidthProvider(Responsive);
 
 const initialLayout: Layout[] = [
   { i: "0", x: 0, y: 0, w: 12, h: 9 },
-  { i: "1", x: 0, y: 9, w: 6, h: 7 },
-  { i: "2", x: 6, y: 9, w: 6, h: 7 },
+  { i: "1", x: 0, y: 9, w: 6, h: 8 },
+  { i: "2", x: 6, y: 9, w: 6, h: 8 },
 ];
 
 const ResponsiveGrid: React.FC = () => {
@@ -69,6 +70,11 @@ const ResponsiveGrid: React.FC = () => {
         isResizable={true}
         onLayoutChange={onLayoutChange}
         draggableHandle=".drag-handle"
+        resizeHandle={
+          <Box className="resize-handle absolute bottom-7 right-1 w-0 h-0 cursor-grab rotate-90">
+            <OpenInFullIcon color="primary" />
+          </Box>
+        }
       >
         {My_Project.slice(0, 3).map((project, idx) => (
           <Card
