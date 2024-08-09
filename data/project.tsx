@@ -21,7 +21,7 @@ export const My_Project = [
     title: "Brain Tumor Detection – Undergrad Research",
     repo: "https://github.com/unclethien/Computer_Vision_UR",
     demo: "/StudyOfBrainTumorPaper.pdf",
-    thumbnail: "/projects_thumbnails/braintumor.png",
+    thumbnail: "/projects_thumbnails/braintumor.jpg",
     overal:
       "Developed an ensemble model with InceptionV3, ResNet, and VGG, achieving 95.6% accuracy in brain tumor classification using MRI scans.",
     description:
