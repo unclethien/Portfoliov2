@@ -32,5 +32,10 @@ const config: Config = {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      lineClamp: ["hover"],
+    },
+  },
 };
 export default config;

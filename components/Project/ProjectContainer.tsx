@@ -15,8 +15,6 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 
-
-
 export const metadata = generatePageMetadata({
   title: "Projects",
   description:
@@ -43,8 +41,8 @@ const ProjectCard = ({ project }: Props) => {
         src={project.thumbnail}
         alt={`${project.title}`}
         style={{
-          width: "80%",
-          height: "auto",
+          width: "auto",
+          maxHeight: "200px",
           borderRadius: "4px 4px 0 0",
           marginLeft: "auto",
           marginRight: "auto",
@@ -56,7 +54,11 @@ const ProjectCard = ({ project }: Props) => {
         <Typography variant="h6" gutterBottom>
           {project.title}
         </Typography>
-        <Typography color="textSecondary" paragraph>
+        <Typography
+          color="textSecondary"
+          paragraph
+          className="line-clamp-3 hover:line-clamp-none"
+        >
           {project.description}
         </Typography>
         <Box display="flex" flexWrap="wrap" gap={1} mb={2}>
@@ -73,10 +75,10 @@ const ProjectCard = ({ project }: Props) => {
               <GitHubIcon />
             </IconButton>
           )}
-          {(project as { external?: string }).external && (
+          {(project as { demo?: string }).demo && (
             <IconButton
               component="a"
-              href={(project as { external?: string }).external}
+              href={(project as { demo?: string }).demo}
             >
               <LinkIcon />
             </IconButton>
