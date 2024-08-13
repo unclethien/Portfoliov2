@@ -26,8 +26,8 @@ const ReactGridLayout = WidthProvider(Responsive);
 
 const initialLayout: Layout[] = [
   { i: "0", x: 0, y: 0, w: 12, h: 9 },
-  { i: "1", x: 0, y: 9, w: 6, h: 8 },
-  { i: "2", x: 6, y: 9, w: 6, h: 8 },
+  { i: "1", x: 0, y: 9, w: 6, h: 10 },
+  { i: "2", x: 6, y: 9, w: 6, h: 10 },
 ];
 
 const ResponsiveGrid: React.FC = () => {
