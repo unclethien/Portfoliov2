@@ -10,10 +10,17 @@ import Hero from "@/components/Hero";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const [mode, setMode] = React.useState<PaletteMode>(() => {
-    return (localStorage.getItem("mode") as PaletteMode) || "light";
-  });
+  const [mode, setMode] = React.useState<PaletteMode>("light");
   const [showCustomTheme] = React.useState(true);
+
+  React.useEffect(() => {
+    // Access localStorage only on the client side
+    const savedMode = localStorage.getItem("mode") as PaletteMode;
+    if (savedMode) {
+      setMode(savedMode);
+    }
+  }, []);
+
   const LPtheme = createTheme(getLPTheme(mode));
   const defaultTheme = createTheme({ palette: { mode } });
 
@@ -24,6 +31,7 @@ export default function Home() {
       return newMode;
     });
   };
+
   return (
     <>
       <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>

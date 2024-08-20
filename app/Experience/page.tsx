@@ -4,11 +4,7 @@ import * as React from "react";
 import { alpha, PaletteMode, Typography } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import ToggleButton from "@mui/material/ToggleButton";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import NavBar from "@/components/NavBar";
 import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
@@ -16,16 +12,22 @@ import LeftAlignedTimeline from "../../components/Experience/TimelineExperience"
 import Container from "@mui/material/Container";
 
 export default function ExperiencePage() {
-  const [mode, setMode] = React.useState<PaletteMode>(() => {
-    return (localStorage.getItem('mode') as PaletteMode) || 'light';
-  });
+  const [mode, setMode] = React.useState<PaletteMode>("light");
+
+  React.useEffect(() => {
+    // Access localStorage only on the client side
+    const savedMode = localStorage.getItem("mode") as PaletteMode;
+    if (savedMode) {
+      setMode(savedMode);
+    }
+  }, []);
 
   const LPtheme = React.useMemo(() => createTheme(getLPTheme(mode)), [mode]);
 
   const toggleColorMode = () => {
     setMode((prev) => {
       const newMode = prev === "dark" ? "light" : "dark";
-      localStorage.setItem('mode', newMode); // Save the new mode in localStorage
+      localStorage.setItem("mode", newMode); // Save the new mode in localStorage
       return newMode;
     });
   };

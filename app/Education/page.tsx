@@ -17,16 +17,22 @@ import Container from "@mui/material/Container";
 import TimelineEducation from "@/components/Education/TimelineEducation";
 
 export default function EducationPage() {
-  const [mode, setMode] = React.useState<PaletteMode>(() => {
-    return (localStorage.getItem('mode') as PaletteMode) || 'light';
-  });
+  const [mode, setMode] = React.useState<PaletteMode>("light");
+
+  React.useEffect(() => {
+    // Access localStorage only on the client side
+    const savedMode = localStorage.getItem("mode") as PaletteMode;
+    if (savedMode) {
+      setMode(savedMode);
+    }
+  }, []);
 
   const LPtheme = React.useMemo(() => createTheme(getLPTheme(mode)), [mode]);
 
   const toggleColorMode = () => {
     setMode((prev) => {
       const newMode = prev === "dark" ? "light" : "dark";
-      localStorage.setItem('mode', newMode); // Save the new mode in localStorage
+      localStorage.setItem("mode", newMode); // Save the new mode in localStorage
       return newMode;
     });
   };
