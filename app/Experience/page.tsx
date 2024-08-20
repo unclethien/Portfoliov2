@@ -15,12 +15,19 @@ import Footer from "../../components/Footer";
 import LeftAlignedTimeline from "../../components/Experience/TimelineExperience";
 import Container from "@mui/material/Container";
 
-export default function Home() {
-  const [mode, setMode] = React.useState<PaletteMode>("light");
-  const LPtheme = createTheme(getLPTheme(mode));
+export default function ExperiencePage() {
+  const [mode, setMode] = React.useState<PaletteMode>(() => {
+    return (localStorage.getItem('mode') as PaletteMode) || 'light';
+  });
+
+  const LPtheme = React.useMemo(() => createTheme(getLPTheme(mode)), [mode]);
 
   const toggleColorMode = () => {
-    setMode((prev) => (prev === "dark" ? "light" : "dark"));
+    setMode((prev) => {
+      const newMode = prev === "dark" ? "light" : "dark";
+      localStorage.setItem('mode', newMode); // Save the new mode in localStorage
+      return newMode;
+    });
   };
 
   return (
