@@ -71,10 +71,10 @@ export default function ProjectPage() {
             </Typography>
             <ProjectContainer />
             <Link
-              href="/projects"
+              href="https://github.com/unclethien"
               variant="subtitle1"
               color="primary"
-              className="m-4"
+              className="m-4 w-fit"
             >
               View all projects
             </Link>
