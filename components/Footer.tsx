@@ -103,9 +103,9 @@ export default function Footer({ mode }: FooterProps) {
         <div>
           <Typography variant="body2" color="text.secondary" mt={1}>
             {"© "}
-            {new Date().getFullYear()}
-            <Link href="#">&nbsp;Thien Nguyen.&nbsp;</Link>
-            {"All rights reserved."}
+            {new Date().getFullYear()}&nbsp;
+            <Link href="#">Thien Nguyen.</Link>
+            {" All rights reserved."}
           </Typography>
         </div>
         <Stack
