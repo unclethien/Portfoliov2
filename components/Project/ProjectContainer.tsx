@@ -94,7 +94,7 @@ export default function Projects() {
     <Container>
       <section>
         <Typography variant="h4" component="h1" gutterBottom>
-          Web apps
+          My Projects
         </Typography>
         <Grid container spacing={4}>
           {My_Project.map((project, idx) => (
