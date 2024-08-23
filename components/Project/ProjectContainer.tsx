@@ -93,9 +93,6 @@ export default function Projects() {
   return (
     <Container>
       <section>
-        <Typography variant="h4" component="h1" gutterBottom>
-          My Projects
-        </Typography>
         <Grid container spacing={4}>
           {My_Project.map((project, idx) => (
             <Grid item xs={12} sm={6} key={idx}>

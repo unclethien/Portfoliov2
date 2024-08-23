@@ -11,6 +11,7 @@ import Footer from "../../components/Footer";
 import Container from "@mui/material/Container";
 import ProjectContainer from "../../components/Project/ProjectContainer";
 import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
 
 export default function ProjectPage() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
@@ -57,6 +58,17 @@ export default function ProjectPage() {
             }}
           >
             <NavBar mode={mode} toggleColorMode={toggleColorMode} />
+            <Typography variant="h4" component="h1" gutterBottom>
+              My Projects
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Over the past few years, I&apos;ve had the opportunity to work on
+              a wide range of projects, from small experiments to significant
+              engineering challenges. I&apos;ve compiled a gallery showcasing
+              many of these projects. Take a look, and if something catches your
+              eye or sparks any questions, don&apos;t hesitate to reach out —
+              I&apos;d love to chat!
+            </Typography>
             <ProjectContainer />
             <Footer mode={mode} />
           </Container>
