@@ -44,26 +44,24 @@ export default function Footer({ mode }: FooterProps) {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
+          flexDirection: { xs: "column", sm: "column", md: "row" },
           width: "100%",
           justifyContent: "space-between",
         }}
       >
         <Box
           sx={{
-            width: { xs: "100%", sm: "60%" },
+            width: { xs: "100%", sm: "100%", md: "60%" },
             display: "flex",
-            justifyContent: { xs: "center", sm: "left" },
+            justifyContent: { xs: "center", sm: "center", md: "left" },
           }}
         >
-          <Box>
-            <Image
-              alt="Profile Logo"
-              src={logo}
-              style={logoStyle}
-              onClick={() => router.push("/")}
-            />
-          </Box>
+          <Image
+            alt="Profile Logo"
+            src={logo}
+            style={logoStyle}
+            onClick={() => router.push("/")}
+          />
         </Box>
         <Box
           sx={{
@@ -71,23 +69,23 @@ export default function Footer({ mode }: FooterProps) {
             justifyContent: "space-between",
             width: "100%",
             borderColor: "divider",
-            py: { xs: 4, sm: 0 },
-            flexDirection: { xs: "column", sm: "row" },
+            py: { xs: 4, sm: 4, md: 0 },
+            flexDirection: { xs: "column", sm: "column", md: "row" },
           }}
         >
-          <Link color="text.secondary" href="/About">
+          <Link color="text.secondary" href="/About" className="py-2">
             About
           </Link>
-          <Link color="text.secondary" href="/Project">
+          <Link color="text.secondary" href="/Project" className="py-2">
             Project
           </Link>
-          <Link color="text.secondary" href="/Experience">
+          <Link color="text.secondary" href="/Experience" className="py-2">
             Experience
           </Link>
-          <Link color="text.secondary" href="/Education">
+          <Link color="text.secondary" href="/Education" className="py-2">
             Education
           </Link>
-          <Link color="text.secondary" href="/Blog">
+          <Link color="text.secondary" href="/Blog" className="py-2">
             Blog(Comming Soon)
           </Link>
         </Box>

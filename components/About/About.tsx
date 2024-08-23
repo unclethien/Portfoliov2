@@ -115,8 +115,8 @@ export default function About() {
                 sx={{
                   display: "flex",
                   flexDirection: { xs: "column", sm: "column", md: "row" },
-                  alignSelf: "left",
-                  textAlign: "left",
+                  alignSelf: {xs: "center", sm: "center", md: "left" },
+                  textAlign: {xs: "center", sm: "center", md: "left" },
                   // fontSize: "clamp(3.5rem, 10vw, 4rem)",
                 }}
               >
@@ -137,8 +137,8 @@ export default function About() {
               </Typography>
               <Typography
                 textAlign="left"
-                color="text.secondary"
-                variant="h6"
+                color="text.primary"
+                variant="subtitle1"
                 sx={{ alignSelf: "left", width: { sm: "100%", md: "90%" } }}
               >
                 As a software engineer, I thrive on pushing boundaries and
@@ -165,7 +165,7 @@ export default function About() {
                 sx={{ alignSelf: "left" }}
               >
                 <GithubIcon />
-                <Typography>&nbsp;Follow me on GitHub</Typography>
+                <Typography variant="body2">&nbsp;Follow me on GitHub</Typography>
               </IconButton>
               <IconButton
                 color="inherit"
@@ -174,7 +174,7 @@ export default function About() {
                 sx={{ alignSelf: "left" }}
               >
                 <LinkedInIcon />
-                <Typography>&nbsp;Connect with me on LinkedIn</Typography>
+                <Typography variant="body2">&nbsp;Connect with me on LinkedIn</Typography>
               </IconButton>
               <IconButton
                 color="inherit"
@@ -183,7 +183,7 @@ export default function About() {
                 sx={{ alignSelf: "left" }}
               >
                 <MailIcon />
-                <Typography>&nbsp;Email me</Typography>
+                <Typography variant="body2">&nbsp;Email me</Typography>
               </IconButton>
             </Stack>
           </Grid>
