@@ -182,6 +182,12 @@ function NavBar({ mode, toggleColorMode }: AppAppBarProps) {
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
+                  <Image
+                    alt="Profile Logo"
+                    src={logo}
+                    style={{ width: "60px", height: "auto", cursor: "pointer", margin:"11px 16px" }}
+                    onClick={() => router.push("/")}
+                  />
                   <MenuItem onClick={() => router.push("/About")}>
                     About
                   </MenuItem>
