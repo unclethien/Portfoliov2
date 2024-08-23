@@ -10,6 +10,7 @@ import getLPTheme from "@/components/getLPTheme";
 import Footer from "../../components/Footer";
 import Container from "@mui/material/Container";
 import ProjectContainer from "../../components/Project/ProjectContainer";
+import Link from "@mui/material/Link";
 
 export default function ProjectPage() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
@@ -59,6 +60,14 @@ export default function ProjectPage() {
             <ProjectContainer />
             <Footer mode={mode} />
           </Container>
+          <Link
+            href="/projects"
+            variant="subtitle1"
+            color="primary"
+            className="m-4"
+          >
+            View all projects
+          </Link>
         </Box>
       </ThemeProvider>
     </>
