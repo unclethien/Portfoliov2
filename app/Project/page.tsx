@@ -70,16 +70,16 @@ export default function ProjectPage() {
               I&apos;d love to chat!
             </Typography>
             <ProjectContainer />
+            <Link
+              href="/projects"
+              variant="subtitle1"
+              color="primary"
+              className="m-4"
+            >
+              View all projects
+            </Link>
             <Footer mode={mode} />
           </Container>
-          <Link
-            href="/projects"
-            variant="subtitle1"
-            color="primary"
-            className="m-4"
-          >
-            View all projects
-          </Link>
         </Box>
       </ThemeProvider>
     </>
